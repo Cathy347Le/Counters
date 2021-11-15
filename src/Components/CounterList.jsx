@@ -14,8 +14,8 @@ class CounterList extends Component {
     };
   }
 
-  handleDelete = () => {
-    console.log("Event recorded");
+  handleDelete = (counterId) => {
+    console.log("Event recorded", counterId);
   };
   render() {
     return (
