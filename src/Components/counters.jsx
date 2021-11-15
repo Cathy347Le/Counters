@@ -23,6 +23,14 @@ class Counter extends Component {
     return badgeClasses;
   }
 
+  increaseCount = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  decreaseCount = () => {
+    this.setState({ count: this.state.count - 1 });
+  };
+
   render() {
     return (
       <div className="counter-item m-4">
@@ -32,8 +40,18 @@ class Counter extends Component {
             {this.formatCount()}
           </span>
         </h3>
-        <button className="btn btn-success btn-sm m-2">Increment</button>
-        <button className="btn btn-danger btn-sm m-2">Decrement</button>
+        <button
+          className="btn btn-success btn-sm m-2"
+          onClick={this.increaseCount}
+        >
+          Increment
+        </button>
+        <button
+          className="btn btn-danger btn-sm m-2"
+          onClick={this.decreaseCount}
+        >
+          Decrement
+        </button>
       </div>
     );
   }

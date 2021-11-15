@@ -8,4 +8,7 @@ NOTE: This project has multiple branches
 - create static Counter component
   - embed expression
   - setting attributes
-  - Render classes dynamically
+  - render classes dynamically
+- rendering lists (use map method)
+  - conditional rendering lists
+- Get counter to increment/decrement (update the state using events)
