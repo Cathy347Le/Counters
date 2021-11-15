@@ -13,3 +13,4 @@ NOTE: This project has multiple branches
   - conditional rendering lists
 - Get counter to increment/decrement (update the state using events)
 - Create CounterList component and display counters
+- Passing data to Components
