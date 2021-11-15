@@ -15,4 +15,7 @@ NOTE: This project has multiple branches
 - Create CounterList component and display counters
 - Passing data to Components and console.log props
 - Pass children aka pass content into component
-- Raising and Handling Events
+- Add a delete button (raising and handling events)
+  - The component that owns a piece of the state should be the one modifying it
+    - CounterList should control the delete feature
+    - Counter component will raise the event (onDelete) and CounterList should handle the event (handleDelete())

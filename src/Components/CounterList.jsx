@@ -13,11 +13,19 @@ class CounterList extends Component {
       ],
     };
   }
+
+  handleDelete = () => {
+    console.log("Event recorded");
+  };
   render() {
     return (
       <div className="counters-container">
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value}></Counter>
+          <Counter
+            key={counter.id}
+            value={counter.value}
+            onDelete={this.handleDelete}
+          ></Counter>
         ))}
       </div>
     );

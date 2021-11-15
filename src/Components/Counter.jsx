@@ -52,7 +52,12 @@ class Counter extends Component {
         >
           Decrement
         </button>
-        <button className="btn btn-warning btn-sm m-2">Delete</button>
+        <button
+          className="btn btn-warning btn-sm m-2"
+          onClick={this.props.onDelete}
+        >
+          Delete
+        </button>
       </div>
     );
   }
