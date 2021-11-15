@@ -17,10 +17,7 @@ class CounterList extends Component {
     return (
       <div className="counters-container">
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value}>
-            <h4>Hello</h4>
-            <h5>World</h5>
-          </Counter>
+          <Counter key={counter.id} value={counter.value}></Counter>
         ))}
       </div>
     );

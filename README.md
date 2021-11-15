@@ -15,3 +15,4 @@ NOTE: This project has multiple branches
 - Create CounterList component and display counters
 - Passing data to Components and console.log props
 - Pass children aka pass content into component
+- Raising and Handling Events
