@@ -34,7 +34,7 @@ class Counter extends Component {
     // console.log("props", this.props);
     return (
       <div className="counter-item m-4">
-        <h3 className="d-flex justify-content-center">
+        <h3 className="d-flex">
           Counter:
           <span style={this.badgeStyles} className={this.getBadgeClasses()}>
             {this.formatCount()}
