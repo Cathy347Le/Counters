@@ -20,3 +20,4 @@ NOTE: This project has multiple branches
     - CounterList should control the delete feature
     - Counter component will raise the event (onDelete) and CounterList should handle the event (handleDelete())
     - Update the state after delete button is clicked
+- Data clean up, pass the entire counter object as a prop, instead of specifying each property you want to pass
