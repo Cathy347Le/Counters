@@ -1,4 +1,3 @@
-import { findByLabelText, findByPlaceholderText } from "@testing-library/dom";
 import React, { Component } from "react";
 
 class Counter extends Component {
