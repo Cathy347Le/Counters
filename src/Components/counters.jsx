@@ -17,12 +17,18 @@ class Counter extends Component {
     return count === 0 ? "Zero" : count;
   }
 
+  getBadgeClasses() {
+    let badgeClasses = "badge ms-2 bg-";
+    badgeClasses += this.state.count === 0 ? "secondary" : "info";
+    return badgeClasses;
+  }
+
   render() {
     return (
       <div className="counter-item m-4">
         <h3 className="d-flex justify-content-center">
           Counter:
-          <span style={this.badgeStyles} className="badge bg-secondary ms-2">
+          <span style={this.badgeStyles} className={this.getBadgeClasses()}>
             {this.formatCount()}
           </span>
         </h3>

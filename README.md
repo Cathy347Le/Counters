@@ -4,7 +4,8 @@ NOTE: This project has multiple branches
 
 ### Step by Step Project Notes
 
-- Install and import bootstrap
-- Create static Counter component
-  - Embed expression
-  - Setting Attributes
+- install and import bootstrap
+- create static Counter component
+  - embed expression
+  - setting attributes
+  - Render classes dynamically
