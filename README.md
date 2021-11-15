@@ -12,3 +12,4 @@ NOTE: This project has multiple branches
 - rendering lists (use map method)
   - conditional rendering lists
 - Get counter to increment/decrement (update the state using events)
+- Create CounterList component and display counters
