@@ -6,7 +6,7 @@ class CounterList extends Component {
     super(props);
     this.state = {
       counters: [
-        { id: 1, value: 0 },
+        { id: 1, value: 5 },
         { id: 2, value: 0 },
         { id: 3, value: 0 },
         { id: 4, value: 0 },
@@ -17,7 +17,7 @@ class CounterList extends Component {
     return (
       <div className="counters-container">
         {this.state.counters.map((counter) => (
-          <Counter key={counter.id} value={counter.value} selected={true} />
+          <Counter key={counter.id} value={counter.value} />
         ))}
       </div>
     );

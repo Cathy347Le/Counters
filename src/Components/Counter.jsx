@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   constructor(props) {
     super(props);
-    this.state = { count: 0 };
+    this.state = { value: this.props.value };
   }
 
   badgeStyles = {
@@ -12,26 +12,26 @@ class Counter extends Component {
   };
 
   formatCount() {
-    const { count } = this.state;
-    return count === 0 ? "Zero" : count;
+    const { value } = this.state;
+    return value === 0 ? "Zero" : value;
   }
 
   getBadgeClasses() {
     let badgeClasses = "badge ms-2 bg-";
-    badgeClasses += this.state.count === 0 ? "secondary" : "info";
+    badgeClasses += this.state.value === 0 ? "secondary" : "info";
     return badgeClasses;
   }
 
   increaseCount = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
   };
 
   decreaseCount = () => {
-    this.setState({ count: this.state.count - 1 });
+    this.setState({ value: this.state.value - 1 });
   };
 
   render() {
-    console.log("props", this.props);
+    // console.log("props", this.props);
     return (
       <div className="counter-item m-4">
         <h3 className="d-flex justify-content-center">
