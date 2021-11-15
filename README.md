@@ -19,4 +19,4 @@ NOTE: This project has multiple branches
   - The component that owns a piece of the state should be the one modifying it
     - CounterList should control the delete feature
     - Counter component will raise the event (onDelete) and CounterList should handle the event (handleDelete())
-    - Update the state
+    - Update the state after delete button is clicked

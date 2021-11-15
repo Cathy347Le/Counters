@@ -15,7 +15,11 @@ class CounterList extends Component {
   }
 
   handleDelete = (counterId) => {
-    console.log("Event recorded", counterId);
+    const newCounters = this.state.counters.filter(
+      (counter) => counter.id !== counterId
+    );
+    this.setState({ counters: newCounters });
+    console.log("Counter deleted", counterId);
   };
   render() {
     return (
