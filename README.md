@@ -26,3 +26,4 @@ NOTE: This project has multiple branches
   - raise and handle Increment and Decrement event
   - add reset button in CounterList handleReset - map method to change all the counter values to 0
 - add a start over button (reloads the window again)
+- add Nav Bar to track the number of active counters
