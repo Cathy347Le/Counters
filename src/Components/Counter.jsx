@@ -19,6 +19,7 @@ class Counter extends Component {
   getBadgeClasses() {
     let badgeClasses = "badge ms-2 bg-";
     // badgeClasses += this.state.value === 0 ? "secondary" : "info";
+
     if (this.state.value === 0) {
       badgeClasses += "secondary";
     } else if (this.state.value > 0) {
@@ -26,6 +27,7 @@ class Counter extends Component {
     } else {
       badgeClasses += "cautious";
     }
+
     return badgeClasses;
   }
 
