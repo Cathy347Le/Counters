@@ -50,6 +50,11 @@ class CounterList extends Component {
     this.setState({ counters });
   };
 
+  handleStateOver = () => {
+    window.location.reload();
+    // console.log("Start Over Again");
+  };
+
   handleDelete = (counterId) => {
     const newCounters = this.state.counters.filter(
       (counter) => counter.id !== counterId
@@ -60,8 +65,11 @@ class CounterList extends Component {
   render() {
     return (
       <div className="counters-container">
+        <button onClick={this.handleStateOver} className="btn btn-primary m-4">
+          <strong>Start Over</strong>
+        </button>
         <button onClick={this.handleReset} className="btn btn-primary m-4">
-          Reset
+          <strong>Reset</strong>
         </button>
         {this.state.counters.map((counter) => (
           <Counter

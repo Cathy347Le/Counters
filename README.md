@@ -25,3 +25,4 @@ NOTE: This project has multiple branches
   - remove the local state in counter component. change it to props aka make counter a presentationl component
   - raise and handle Increment and Decrement event
   - add reset button in CounterList handleReset - map method to change all the counter values to 0
+- add a start over button (reloads the window again)
