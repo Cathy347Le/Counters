@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: this.props.counter.value };
-  }
-
   badgeStyles = {
     fontSize: 20,
     fontWeight: "bold",
   };
 
   formatCount() {
-    const { value } = this.state;
+    const { value } = this.props.counter;
     return value === 0 ? "Zero" : value;
   }
 
@@ -20,9 +15,9 @@ class Counter extends Component {
     let badgeClasses = "badge ms-2 bg-";
     // badgeClasses += this.state.value === 0 ? "secondary" : "info";
 
-    if (this.state.value === 0) {
+    if (this.props.counter.value === 0) {
       badgeClasses += "secondary";
-    } else if (this.state.value > 0) {
+    } else if (this.props.counter.value > 0) {
       badgeClasses += "info";
     } else {
       badgeClasses += "cautious";
@@ -30,14 +25,6 @@ class Counter extends Component {
 
     return badgeClasses;
   }
-
-  increaseCount = () => {
-    this.setState({ value: this.state.value + 1 });
-  };
-
-  decreaseCount = () => {
-    this.setState({ value: this.state.value - 1 });
-  };
 
   render() {
     // console.log("props", this.props);
@@ -51,13 +38,13 @@ class Counter extends Component {
         </h3>
         <button
           className="btn btn-success btn-sm m-2"
-          onClick={this.increaseCount}
+          onClick={() => this.props.onIncrement(this.props.counter)}
         >
           Increment
         </button>
         <button
           className="btn btn-danger btn-sm m-2"
-          onClick={this.decreaseCount}
+          onClick={() => this.props.onDecrement()}
         >
           Decrement
         </button>
