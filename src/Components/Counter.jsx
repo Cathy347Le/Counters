@@ -27,7 +27,7 @@ class Counter extends Component {
   }
 
   render() {
-    // console.log("props", this.props);
+    console.log("props", this.props);
     return (
       <div className="counter-item m-4">
         <h3 className="d-flex">

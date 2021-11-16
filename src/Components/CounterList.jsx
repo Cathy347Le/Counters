@@ -14,6 +14,23 @@ class CounterList extends Component {
     };
   }
 
+  //Update State, but DO NOT update the state directly. Create a new counters array and pass it into the setState method and have React update the state
+  //Need to clone the counter and the given location so we have a diff object then the one in the state. You don't need to clone the other counters, just the one you want to change.
+  handleIncrement = (counter) => {
+    // console.log(this.state.counters);
+    //Clone the state counter array, must be called counters
+    const counters = [...this.state.counters];
+    //Capture the index of the targeted counter in the counters array
+    const index = counters.indexOf(counter);
+    //Capturing the targeted cloned counter via index
+    counters[index] = { ...counter };
+    //Incrementing the targeted cloned counter
+    counters[index].value++;
+    //passing the newCounters array to the setState method
+    this.setState({ counters });
+    // console.log(counters);
+  };
+
   handleDelete = (counterId) => {
     const newCounters = this.state.counters.filter(
       (counter) => counter.id !== counterId
@@ -27,6 +44,7 @@ class CounterList extends Component {
         {this.state.counters.map((counter) => (
           <Counter
             key={counter.id}
+            onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
             counter={counter}
           ></Counter>
