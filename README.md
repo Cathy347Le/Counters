@@ -30,3 +30,4 @@ NOTE: This project has multiple branches
   - Nav Bar does not have parent-child relationship to counterList, therefore you need to lift the state up to App component
   - CounterList becomes a presentational component
   - Bubbling it up to the parent
+  - add number of counter on Navbar

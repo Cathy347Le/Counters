@@ -68,7 +68,7 @@ class App extends Component {
   render() {
     return (
       <div className="counters-main-container">
-        <NavBar />
+        <NavBar totalCounters={this.state.counters.length} />
         <CounterList
           counters={this.state.counters}
           onIncrement={this.handleIncrement}
