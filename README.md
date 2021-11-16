@@ -27,3 +27,6 @@ NOTE: This project has multiple branches
   - add reset button in CounterList handleReset - map method to change all the counter values to 0
 - add a start over button (reloads the window again)
 - add Nav Bar to track the number of active counters
+  - Nav Bar does not have parent-child relationship to counterList, therefore you need to lift the state up to App component
+  - CounterList becomes a presentational component
+  - Bubbling it up to the parent
