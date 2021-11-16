@@ -31,6 +31,16 @@ class CounterList extends Component {
     // console.log(counters);
   };
 
+  handleDecrement = (counter) => {
+    // console.log(this.state.counters);
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
+    this.setState({ counters });
+    // console.log(counters);
+  };
+
   handleDelete = (counterId) => {
     const newCounters = this.state.counters.filter(
       (counter) => counter.id !== counterId
@@ -45,6 +55,7 @@ class CounterList extends Component {
           <Counter
             key={counter.id}
             onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
             onDelete={this.handleDelete}
             counter={counter}
           ></Counter>

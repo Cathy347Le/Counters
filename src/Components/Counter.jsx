@@ -27,7 +27,7 @@ class Counter extends Component {
   }
 
   render() {
-    console.log("props", this.props);
+    // console.log("props", this.props);
     return (
       <div className="counter-item m-4">
         <h3 className="d-flex">
@@ -44,7 +44,7 @@ class Counter extends Component {
         </button>
         <button
           className="btn btn-danger btn-sm m-2"
-          onClick={() => this.props.onDecrement()}
+          onClick={() => this.props.onDecrement(this.props.counter)}
         >
           Decrement
         </button>

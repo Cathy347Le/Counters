@@ -22,4 +22,5 @@ NOTE: This project has multiple branches
     - update the state after delete button is clicked
 - data clean up, pass the entire counter object as a prop, instead of specifying each property you want to pass
 - add a reset button - (requires a single source of truth)
-  - remove the local state in counter component. make counter a presentationl component
+  - remove the local state in counter component. change it to props aka make counter a presentationl component
+  - raise and handle Increment and Decrement event
