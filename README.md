@@ -35,3 +35,4 @@ NOTE: This project has multiple branches
 - Cleaning up files
   - Stateless Functional Component
     - NavBar - pass in props and remove this
+  - Destructuring Arguments
