@@ -41,16 +41,28 @@ class CounterList extends Component {
     // console.log(counters);
   };
 
+  //Use map method to make all the counter values be 0
+  handleReset = () => {
+    const counters = this.state.counters.map((counter) => {
+      counter.value = 0;
+      return counter;
+    });
+    this.setState({ counters });
+  };
+
   handleDelete = (counterId) => {
     const newCounters = this.state.counters.filter(
       (counter) => counter.id !== counterId
     );
     this.setState({ counters: newCounters });
-    console.log("Counter deleted", counterId);
+    // console.log("Counter deleted", counterId);
   };
   render() {
     return (
       <div className="counters-container">
+        <button onClick={this.handleReset} className="btn btn-primary m-4">
+          Reset
+        </button>
         {this.state.counters.map((counter) => (
           <Counter
             key={counter.id}
