@@ -32,3 +32,6 @@ NOTE: This project has multiple branches
   - Bubbling it up to the parent
   - add number of counter on Navbar
   - record only counters that are not zero
+- Cleaning up files
+  - Stateless Functional Component
+    - NavBar - pass in props and remove this
